@@ -1,17 +1,32 @@
-const Navbar = () => {
+import { Link } from "react-router-dom";
+
+const Navbar = ({ user }) => {
   return (
     <div className="navbar">
-      <span className="logo">Juand</span>
-      <ul className="list">
-        <li className="listItem">
-          <img src="" alt="" className="avatar" />
-        </li>
-        <li className="listItem">Juan David</li>
-        <li className="listItem">Logout</li>
-      </ul>
-
+      <span className="logo">
+        <Link className="link" to="/">
+          Lama App
+        </Link>
+      </span>
+      {user ? (
+        <ul className="list">
+          <li className="listItem">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/6124/6124995.png"
+              alt="avatar"
+              className="avatar"
+            />
+          </li>
+          <li className="listItem">{user.displayName}</li>
+          <li className="listItem">Logout</li>
+        </ul>
+      ) : (
+        <Link className="link" to="login">
+          Login
+        </Link>
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

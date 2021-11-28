@@ -5,7 +5,10 @@ const Navbar = ({ user }) => {
     <div className="navbar">
       <span className="logo">
         <Link className="link" to="/">
-          Lama App
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/124/124567.png"
+            alt=""
+          />
         </Link>
       </span>
       {user ? (

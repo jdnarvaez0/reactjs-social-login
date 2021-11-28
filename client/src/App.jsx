@@ -7,7 +7,7 @@ import Post from "./pages/Post";
 import "./App.css";
 
 const App = () => {
-  const user = true;
+  const user = false;
 
   return (
     <BrowserRouter>
